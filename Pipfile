@@ -8,9 +8,16 @@ pudb = "*"
 ipython = "*"
 mypy = "*"
 pylint = "*"
+jupyter = "*"
+jupyterlab = "*"
 
 [packages]
 tensorflow = "~=1.12"
+numpy = "*"
+scipy = "*"
+matplotlib = "*"
+seaborn = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.6"
