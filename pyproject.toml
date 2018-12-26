@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "dota2-models"
+name = "hero2vec"
 version = "0.1.0"
 description = "Learning dota2 hero embeddings from matches"
 authors = ["Anton Barkovsky <anton@swarmer.me>"]
 license = "MIT"
 packages = [
-    { include = "dota2models" },
+    { include = "hero2vec" },
 ]
 
 [tool.poetry.dependencies]

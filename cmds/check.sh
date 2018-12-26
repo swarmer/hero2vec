@@ -6,13 +6,13 @@ green=$(tput setaf 2)
 normal=$(tput sgr0)
 
 echo "${bold}mypy${normal}"
-mypy --ignore-missing-imports dota2models \
+mypy --ignore-missing-imports hero2vec \
     && echo "${green}OK${normal}" \
     || exit 1
 echo
 
 echo "${bold}pylint${normal}"
-pylint dota2models \
+pylint hero2vec \
     && echo -e "${green}OK${normal}\n" \
     || exit 1
 

@@ -20,12 +20,12 @@ class Hero2Vec(nn.Module):
         self.hero_count = hero_count
 
         self.hero_embedding = nn.Linear(hero_count, emb_dim, bias=False)
-        self.missing_hero_softmax = nn.Linear(emb_dim, hero_count)
+        self.missing_hero_logits = nn.Linear(emb_dim, hero_count)
 
     def forward(self, inputs):
         embedded_heroes = self.hero_embedding(inputs)
         team_embedding = torch.mean(embedded_heroes, dim=1)
-        missing_hero = self.missing_hero_softmax(team_embedding)
+        missing_hero = self.missing_hero_logits(team_embedding)
         return missing_hero
 
 
