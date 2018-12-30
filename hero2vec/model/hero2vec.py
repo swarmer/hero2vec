@@ -73,7 +73,7 @@ def train():
     @trainer.on(igne.Events.ITERATION_COMPLETED)
     def log_training_loss(trainer):
         if trainer.state.iteration % 100 == 0:
-            print(f'[Epoch {trainer.state.epoch}] Loss: {trainer.state.output:.2f}')
+            print(f'{trainer.state.iteration} [Epoch {trainer.state.epoch}] Loss: {trainer.state.output:.2f}')
 
     @trainer.on(igne.Events.EPOCH_COMPLETED)
     def log_training_evaluation(trainer):
